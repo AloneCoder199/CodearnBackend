@@ -89,7 +89,7 @@ app.post("/api/contact", async (req, res) => {
           <p style="text-align:center;">Thank you for reaching out to <strong>CodEarn Tech</strong>. 🙌</p>
           <p style="text-align:center;">We’ve received your message and our team will respond within <strong>24 hours</strong>.</p>
           <div style="text-align:center; margin: 30px 0;">
-            <a href="https://yourdomain.com" 
+            <a href="https://codearntech.cloud" 
                style="background: #FF9800; color: white; text-decoration: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; display: inline-block; transition: all 0.3s;">
                🚀 Visit CodEarn Tech
             </a>
@@ -138,7 +138,7 @@ app.post("/api/subscribe", async (req, res) => {
           <p style="text-align:center;">Thanks for subscribing to <strong>CodEarn Tech</strong> daily updates. 🚀</p>
           <p style="text-align:center;">You will receive daily emails with the latest news and tutorials. 💡</p>
           <div style="text-align:center; margin-top:25px;">
-            <a href="https://yourdomain.com"
+            <a href="https://codearntech.cloud"
                style="background:#FF9800; color:white; text-decoration:none; padding:12px 25px; border-radius:8px; font-weight:bold; display:inline-block; transition:all 0.3s;">
                🚀 Visit CodEarn Tech
             </a>
@@ -193,7 +193,7 @@ cron.schedule("0 9 * * *", async () => {
                 <li>🌐 Web development insights</li>
               </ul>
               <div style="text-align:center; margin-top:15px;">
-                <a href="https://yourdomain.com"
+                <a href="https://codearntech.cloud"
                   style="background:#FF9800; color:white; text-decoration:none; padding:12px 25px; border-radius:8px; font-weight:bold; display:inline-block; transition:all 0.3s;">
                   🚀 Visit CodEarn Tech
                 </a>
@@ -257,7 +257,7 @@ app.get("/sitemap.xml", (req, res) => {
       { url: "/", priority: "1.0" },
       { url: "/about", priority: "0.9" },
       { url: "/services", priority: "0.9" },
-      { url: "/blog", priority: "0.8" },
+      { url: "/articals", priority: "0.8" },
       { url: "/contact", priority: "0.8" },
       { url: "/privacy-policy", priority: "0.6" },
       { url: "/terms", priority: "0.6" },
