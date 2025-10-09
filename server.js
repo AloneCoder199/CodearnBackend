@@ -159,24 +159,57 @@ cron.schedule("0 9 * * *", async () => {
       },
     });
 
-    for (const email of emails) {
-      await transporter.sendMail({
-        from: `"CodEarn Tech" <${process.env.EMAIL_USER}>`,
-        to: email,
-        subject: "🌟 Daily Updates from CodEarn Tech",
-        html: `
-          <div style="font-family: Arial, sans-serif; padding:25px;">
-            <h2 style="color:#00BCD4;">Hello Subscriber!</h2>
-            <p>Here are your daily updates from <strong>CodEarn Tech</strong>. 🚀</p>
-            <ul>
-              <li>💡 Latest MERN stack tutorials</li>
-              <li>⚡ Rapid prototyping tips</li>
-              <li>🌐 Web development insights</li>
+   for (const email of emails) {
+  await transporter.sendMail({
+    from: `"CodEarn Tech" <${process.env.EMAIL_USER}>`,
+    to: email,
+    subject: "💼 Welcome to CodEarn Tech – Certified Developers You Can Trust!",
+    html: `
+      <div style="font-family: 'Poppins', Arial, sans-serif; background:#F9FAFB; padding:30px; border-radius:16px; border:1px solid #E0E0E0; color:#0D1B2A;">
+        <div style="text-align:center; margin-bottom:20px;">
+          <img src="https://codearntech.cloud/logo.png" alt="CodEarn Tech" width="120" style="border-radius:50%; margin-bottom:10px;" />
+          <h2 style="color:#00BCD4;">👋 Welcome to CodEarn Tech!</h2>
+          <p style="font-size:15px; color:#555;">Empowering your ideas with technology, precision, and guaranteed success.</p>
+        </div>
+
+        <div style="background:#FFFFFF; border-radius:14px; padding:20px; box-shadow:0 4px 15px rgba(0,0,0,0.08); margin-bottom:25px;">
+          <p style="font-size:15px; line-height:1.6;">
+            We are a <strong>Professional & Certified Development Team</strong> dedicated to creating
+            <span style="color:#00BCD4;">high-quality, fully functional, and scalable projects</span> — built with passion and precision.
+          </p>
+
+          <p style="font-size:15px; line-height:1.6;">
+            Every project comes with our <strong>Official Work Proof Certificate</strong> 🏅 and a
+            <strong>100% Satisfaction Guarantee</strong> ✅ — because your success is our priority!
+          </p>
+
+          <div style="background:#F7FBFC; padding:15px; border-radius:12px; margin-top:20px;">
+            <h3 style="color:#FF9800; text-align:center;">💡 Our Core Expertise</h3>
+            <ul style="margin:15px 0 0 25px; color:#0D1B2A; font-size:14px; line-height:1.8;">
+              <li>🌍 Modern & Responsive Website Development</li>
+              <li>🛒 Complete Ecommerce Solutions</li>
+              <li>📂 Portfolio & Personal Branding Websites</li>
+              <li>💭 Custom Web Applications (Tailored to your Idea)</li>
             </ul>
-            <a href="https://codearntech.cloud" style="background:#FF9800; color:white; padding:10px 20px; text-decoration:none; border-radius:8px;">Visit CodEarn Tech</a>
           </div>
-        `,
-      });
+
+          <div style="text-align:center; margin-top:25px;">
+            <a href="https://codearntech.cloud" 
+              style="background:linear-gradient(90deg,#00BCD4,#FF9800); color:white; text-decoration:none; padding:12px 28px; border-radius:30px; font-weight:600; box-shadow:0 3px 10px rgba(0,0,0,0.15); transition:all 0.3s;">
+              🚀 Explore CodEarn Tech
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align:center; font-size:13px; color:gray;">
+          <p>Thanks for being part of our journey. Let's build something amazing together! 💻</p>
+          <hr style="margin:20px 0; border:none; border-top:1px solid #eee;" />
+          <p>You are receiving this email because you subscribed to <strong>CodEarn Tech</strong> updates.</p>
+        </div>
+      </div>
+    `,
+  });
+
       console.log(`✅ Sent daily email to: ${email}`);
     }
   } catch (err) {
